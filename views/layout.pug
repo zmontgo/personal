@@ -1,0 +1,48 @@
+doctype html
+html(lang="en-us")
+  head
+    if title
+      title= title
+    else
+      title North Point Heating and Air
+    // Meta tags
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=Edge")
+    meta(
+      name="viewport",
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+    )
+    // Links
+    link(rel="stylesheet", href="/stylesheets/style.css" defer)
+    link(rel="stylesheet", href="https://unpkg.com/aos@next/dist/aos.css" defer)
+    link(rel="preconnect" href="https://fonts.googleapis.com" defer)
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin defer)
+    link(href="https://fonts.googleapis.com/css2?family=Cinzel&family=Vollkorn&display=swap" rel="stylesheet")
+    link(rel="apple-touch-icon" href="/img/logo.png")
+    link(rel="icon" type="image/ico" href="/img/logo.ico")
+    noscript
+      link(rel="stylesheet", media="all", href="/stylesheets/noscript.css" defer)
+    // Viewport relativity
+    script.
+      var viewportmeta = document.querySelector('meta[name="viewport"]');
+      if (viewportmeta) {
+        if (screen.width < 375) {
+          var newScale = screen.width / 375;
+          viewportmeta.content = 'width=375, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
+        } else {
+          viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
+        }
+      }
+  body.collapse(
+    class=typeof heroClass === 'undefined' ? undefined : 'header',
+    onload="javascript:allowAni()"
+  )
+    div(
+      style="display: flex; flex-direction: column; justify-content: space-between; min-height: 100vh"
+    )#primary_content
+      .content
+        block content
+
+    // Scripts
+    script(src="https://unpkg.com/aos@next/dist/aos.js" defer)
+    script(src="/javascripts/main.js" defer)
