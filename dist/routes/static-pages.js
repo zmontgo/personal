@@ -4,7 +4,6 @@ exports.init = void 0;
 const router_1 = require("../components/router");
 function init() {
     router_1.router.get("/", async (ctx) => {
-        console.log('Hi');
         ctx.render("index.pug", {
             title: "Home | Zachary Montgomery",
             heroClass: true,

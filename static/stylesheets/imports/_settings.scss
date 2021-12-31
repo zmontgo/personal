@@ -11,8 +11,7 @@ $border-radius: $base-sizing*0.2 !default;
 
 $grey-color: hsl(0,0%,70%) !default;
 $light-grey: hsl(0,0%,85%) !default;
-$green: #235d43;
-$gold: #cdaf68;
+$purple: #8f8fff;
 
 $base-sizing: 30px;
 
@@ -58,8 +57,9 @@ $transition-time: 0.4s;
 }
 
 :root {
-  --background-color: #fff;
-	--text-color: #000;
+  --background-color: #121212;
+	--text-color: #ffffffDD;
+  --text-important-color: #fff;
 	--grey-text-color: #666;
 }
 
