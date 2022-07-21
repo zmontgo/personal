@@ -1,4 +1,4 @@
-# Dichotomy Website
+# Personal Website
 
 ## Requirements
 - Rust nightly build

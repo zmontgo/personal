@@ -1,35 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dichotomycs.com/</loc>
-    <lastmod>2022-07-16</lastmod>
+    <loc>https://zachmontgomery.com/</loc>
+    <lastmod>2022-07-20</lastmod>
   </url>
   <url>
-    <loc>https://dichotomycs.com/coffee</loc>
-    <lastmod>2022-07-16</lastmod>
+    <loc>https://zachmontgomery.com/web</loc>
+    <lastmod>2022-07-20</lastmod>
   </url>
   <url>
-    <loc>https://dichotomycs.com/contact</loc>
-    <lastmod>2022-07-16</lastmod>
-  </url>
-  <url>
-    <loc>https://dichotomycs.com/employment</loc>
-    <lastmod>2022-07-16</lastmod>
-  </url>
-  <url>
-    <loc>https://dichotomycs.com/spirits</loc>
-    <lastmod>2022-07-16</lastmod>
-  </url>
-  <url>
-    <loc>https://dichotomycs.com/humans.txt</loc>
-    <lastmod>2022-07-16</lastmod>
-  </url>
-  <url>
-    <loc>https://dichotomycs.com/robots.txt</loc>
-    <lastmod>2022-07-16</lastmod>
-  </url>
-  <url>
-    <loc>https://dichotomycs.com/sitemap.xml</loc>
-    <lastmod>2022-07-16</lastmod>
+    <loc>https://zachmontgomery.com/thoughts</loc>
+    <lastmod>2022-07-20</lastmod>
   </url>
 </urlset>

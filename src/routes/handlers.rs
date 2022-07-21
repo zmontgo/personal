@@ -19,7 +19,7 @@ pub fn default_catcher(status: Status, request: &Request) -> Template {
   }
 
   Template::render("errors/default", context! {
-    title: "Error | Dichotomy Coffee & Spirits",
+    title: "Error | Zachary Montgomery",
     status: code,
     error: error
   })
