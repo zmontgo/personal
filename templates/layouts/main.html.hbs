@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{#if title}}
+      <title>{{title}}</title>
+    {{else}}
+      <title>Zachary Montgomery</title>
+    {{/if}}
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible", content="IE=Edge">
+    <meta name="format-detection", content="telephone=no">
+    <meta name="msapplication-TileColor", content="#FFC24A">
+    <meta name="theme-color", content="#FFC24A">
+    <meta name="description", content="">
+    <link rel="canonical", href="">
+    <meta property="og:locale", content="en_US">
+    <meta property="og:type", content="website">
+    <meta property="og:title", content="">
+    <meta property="og:description", content="">
+    <meta property="og:url", content="">
+    <meta property="og:site_name", content="">
+    <link rel="shortlink", href="">
+    <!-- Links -->
+    <link rel="stylesheet", href="/css/style.css", defer>
+    <link rel="apple-touch-icon", href="/img/png/logo.png">
+    <link rel="icon", type="image/ico", href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Dosis&display=swap" rel="stylesheet">
+    <!-- Viewport relativity -->
+    <meta name="viewport", content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="scrolled" class="scrolled"></div>
+    {{~> imports/header }}
+
+    <div class="content">
+      {{~> content}}
+    </div>
+
+    {{~> imports/footer }}
+
+    <!-- Scripts -->
+    <script src="/javascripts/main.js", defer></script>
+  </body>
+</html>

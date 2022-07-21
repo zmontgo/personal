@@ -1,0 +1,13 @@
+{{#*inline "content"}}
+  <div class="spacer"></div>
+  <div class="section">
+    <div class="section__text">
+      <h1>Error {{status}}</h1>
+      <p>Woah there cowboy! You ran into an error. Need to go back <a href="/">home</a>?</p>
+      {{#if error}}
+        <p class="small">Error: {{error}}</p>
+      {{/if}}
+    </div>
+  </div>
+{{/inline}}
+{{~> layouts/main~}}

@@ -1,0 +1,217 @@
+@use "sass:math";
+
+.vr {
+  margin-top: $base-sizing;
+}
+
+.back {
+  a {
+    display: flex;
+    align-items: center;
+    gap: math.div($base-sizing, 2);
+
+    svg {
+      height: math.div($base-sizing, 1.5)
+    }
+  }
+}
+
+.small {
+  font-size: .8em!important;
+}
+
+.scrolled {
+  position: absolute;
+}
+
+.hero {
+  height: 100vh;
+
+  &__text {
+    h1 {
+      font-size: max(15vw, 1.2em);
+      line-height: 1;
+    }
+  }
+}
+
+.section {
+  padding: $base-sizing*2 20vw;
+
+  p {
+    font-size: 1.1em;
+  }
+}
+
+.form {
+  border: solid 3px var(--text-color);
+  max-width: $base-sizing*25;
+  position: relative;
+
+  button {
+    overflow: visible;
+  }
+  
+  button, select {
+    text-transform: none;
+  }
+  
+  button, input, select, textarea {
+    color: black;
+    font: inherit;
+    margin: 0;
+  }
+  
+  input {
+    line-height: normal;
+  }
+  
+  textarea {
+    overflow: auto;
+  }
+  
+  form {
+    padding: 0 $base-sizing*2 $base-sizing*2;
+  }
+  
+  h1 {
+    color: var(--text-color);
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 7px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .underline {
+    border-bottom: solid 2px var(--text-color);
+    margin: $base-sizing auto;
+    width: 80px;
+  }
+  
+  .icon_wrapper {
+    width: 100%;
+  }
+  
+  .icon {
+    display: block;
+    fill: var(--text-color);
+    height: 50px;
+    margin: 0 auto;
+    width: 50px;
+  }
+  
+  .email {
+    float: right;
+    width: 45%;
+  }
+  
+  input[type='text'], [type='email'], select, textarea {
+    background: none;
+    border: none;
+    border-bottom: solid 2px var(--text-color);
+    color: var(--text-color);
+    font-size: 1.000em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0em 0 $base-sizing 0;
+    padding: math.div($base-sizing, 2) 0 math.div($base-sizing, 2) 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  select {
+    text-transform: uppercase;
+  }
+  
+  input[type='text']:focus, [type='email']:focus, textarea:focus {
+    outline: none;
+  }
+  
+  .message {
+    float: none;
+  }
+  
+  .name {
+    float: left;
+    width: 45%;
+  }
+  
+  select {
+    background: url('/img/caret-down-solid.svg') no-repeat right;
+    background-size: math.div($base-sizing, 2);
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+  
+  select::-ms-expand {
+    display: none;
+  }
+  
+  .subject {
+    width: 100%;
+  }
+  
+  .telephone {
+    width: 100%;
+  }
+  
+  textarea {
+    line-height: 150%;
+    height: 150px;
+    resize: none;
+    width: 100%;
+  }
+  
+  ::-webkit-input-placeholder {
+    color: var(--text-color);
+  }
+  
+  :-moz-placeholder { 
+    color: var(--text-color);
+    opacity: 1;
+  }
+  
+  ::-moz-placeholder {
+    color: var(--text-color);
+    opacity: 1;
+  }
+  
+  :-ms-input-placeholder {
+    color: var(--text-color);
+  }
+  
+  .btn {
+    background: none;
+    border: solid 2px var(--text-color);
+    color: #474544;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    padding: 20px $base-sizing;
+    text-transform: uppercase;
+    transition: all 0.3s;
+  
+    &:hover:not(:disabled) {
+      background: var(--text-color);
+      color: #F2F3EB;
+    }
+
+    &:disabled {
+      cursor: default;
+    }
+  }
+}

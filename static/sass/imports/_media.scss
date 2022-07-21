@@ -1,0 +1,142 @@
+@use 'sass:math';
+
+@media only screen and (min-width: $on-mobile) {
+  .footer {
+    flex-direction: row;
+  }
+
+  .header {
+    gap: $base-sizing;
+    transition: height $transition-time;
+
+    .title {
+      flex: 2;
+      text-decoration: none;
+    }
+
+    ul {
+      background: none;
+      box-shadow: none;
+      position: relative;
+      flex: 5;
+
+      .inner {
+        display: flex;
+        flex-direction: row;
+        gap: math.div($base-sizing, 2);
+        justify-content: right;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+      }
+      
+      li {
+        display: flex;
+        opacity: 1;
+        flex: unset;
+
+        a {
+          letter-spacing: 0;
+          font-size: 90%;
+          padding: math.div($base-sizing, 6) math.div($base-sizing, 2);
+          border-radius: $base-sizing;
+          text-decoration: none;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .toggle {
+      display: none;
+    }
+  }
+
+  /* HOVERしたら文字1を上に */
+  .effect04:hover span{
+    -webkit-transform: translateY(-400%) scale(-0.1,20);
+            transform: translateY(-400%) scale(-0.1,20);
+  }
+
+  /* HOVERしたら文字2を上に */
+  .effect04:hover .hidden{
+    letter-spacing: 0.05em;
+    -webkit-transform: translateY(0) scale(1,1);
+            transform: translateY(0) scale(1,1);
+  }
+
+  .marquee{
+    overflow: hidden;
+    white-space: nowrap;
+
+    .div1 {
+      display: inline-block;
+      animation: marquee 20s linear infinite;
+      animation-delay: -10s;
+    }
+
+    .div2 {
+      display: inline-block;
+      animation: marquee2 20s linear infinite;
+      animation-delay: 0s;
+    }
+  }
+}
+
+@media only screen and (max-width: $on-mobile) {
+  .header {
+    a {
+      letter-spacing: 0.1em;
+      font-size: 14px;
+      font-weight: 400;
+      text-decoration: none;
+    }
+  }
+
+  .effect04 span {
+    transition: 0.1s;
+    transition-delay: 0;
+  }
+  .effect04:hover{
+    color: black
+  }
+
+  .footer {
+    padding: $base-sizing*3 10vw $base-sizing*5;
+  }
+
+  .section {
+    flex-direction: column-reverse;
+    padding: $base-sizing*2 10vw;
+
+    &__reversed {
+      flex-direction: column;
+    }
+
+    img {
+      height: $base-sizing*10;
+    }
+  }
+}
+
+
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}

@@ -1,6 +1,3 @@
-/node_modules/
-.vscode
+target
+css
 .env
-.yarn-error*
-/keys/
-config.json

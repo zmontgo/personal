@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+$base-font-family: 'Dosis', -apple-system, BlinkMacSystemFont, "Roboto", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-size:   20px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$base-sizing: 30px !default;
+$border-radius: $base-sizing*0.5 !default;
+
+$grey-color: hsl(0,0%,70%) !default;
+$light-grey: hsl(0,0%,85%) !default;
+
+$sage: #cdc79b;
+$chocolate: #1a1601;
+$ruby: #931621;
+$turq: #326771;
+
+$grey-color:       #808080 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+$table-text-align: left !default;
+
+$background-color: #fff !default;
+$text-color: #000 !default;
+
+$content-width: 900px !default;
+
+$on-mobile: $content-width+(10*$base-sizing) !default;
+
+$transition-time: 0.4s;
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+:root {
+  --background-color: #{$sage};
+	--text-color: #{$chocolate};
+  --hover-color: #000;
+  --header-color: #{$chocolate};
+	--grey-text-color: #666;
+}
+
+/*@font-face {
+  font-family: "Noto Sans";
+  src: url("/fonts/NotoSans-Regular.ttf") format('truetype');
+}*/
