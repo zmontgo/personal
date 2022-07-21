@@ -1,4 +1,5 @@
 #[macro_use] extern crate rocket;
+#[macro_use] extern crate diesel;
 extern crate rocket_dyn_templates;
 extern crate dotenv;
 
@@ -8,6 +9,8 @@ use dotenv::dotenv;
 use std::env;
 
 #[cfg(test)] mod tests;
+
+mod database;
 mod helper;
 mod routes;
 
@@ -31,6 +34,9 @@ fn rocket() -> _ {
             routes::get::index,
             routes::get::web,
             routes::get::blog,
+            routes::get::create,
+            routes::get::update,
+            routes::get::delete,
             routes::static_files::files
         ])
         .register("/", catchers![routes::handlers::default_catcher])

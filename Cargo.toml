@@ -8,6 +8,9 @@ publish = false
 rocket = "0.5.0-rc.2"
 sentry = "0.27.0"
 dotenv = "0.15.0"
+diesel = { version = "1.4.4", features = ["postgres", "chrono"] }
+bcrypt = "0.13.0"
+chrono = "0.4"
 
 [dependencies.rocket_dyn_templates]
 version = "0.1.0-rc.2"
