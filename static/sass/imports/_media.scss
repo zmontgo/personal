@@ -119,6 +119,27 @@
       height: $base-sizing*10;
     }
   }
+
+  .form {
+    border: none;
+    border-top: solid 3px var(--text-color);
+    border-bottom: solid 3px var(--text-color);
+    margin: $base-sizing*2 0;
+
+    form {
+      padding: 0;
+      padding-bottom: $base-sizing*2;
+    }
+
+    h1 {
+      font-size: 7vw;
+    }
+
+    .name, .email {
+      width: 100%;
+      float: none;
+    }
+  }
 }
 
 
