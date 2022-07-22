@@ -1,4 +1,4 @@
-use rocket::http::{Header};
+use rocket::http::Header;
 use rocket::fairing::AdHoc;
 
 pub fn init() -> AdHoc {

@@ -5,6 +5,7 @@ extern crate dotenv;
 
 use rocket_dyn_templates::Template;
 use rocket::Config;
+use rocket::fs::FileServer;
 use dotenv::dotenv;
 use std::env;
 
@@ -33,12 +34,9 @@ fn rocket() -> _ {
         .mount("/", routes![
             routes::get::index,
             routes::get::web,
-            routes::get::blog,
-            routes::get::create,
-            routes::get::update,
-            routes::get::delete,
-            routes::static_files::files
+            routes::get::blog
         ])
+        .mount("/", FileServer::from("static/"))
         .register("/", catchers![routes::handlers::default_catcher])
         .attach(helper::csp::init())
         .attach(Template::fairing())
