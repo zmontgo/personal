@@ -1,5 +1,5 @@
 CREATE TABLE hashes (
   id SERIAL PRIMARY KEY,
-  hash_body VARCHAR NOT NULL,
+  hash_body VARCHAR NOT NULL UNIQUE,
   hash_date TIMESTAMP NOT NULL
 )

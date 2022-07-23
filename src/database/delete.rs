@@ -2,13 +2,11 @@ use crate::database::connect;
 
 use diesel::prelude::*;
 
-pub fn delete(post_id: i32) {
-    use crate::database::schema::posts::dsl::*;
+pub fn delete_hash(hash: &str) {
+    use crate::database::schema::hashes::dsl::*;
 
     let connection = connect::establish_connection();
-    let num_deleted = diesel::delete(posts.find(post_id))
+    diesel::delete(hashes.filter(hash_body.eq(hash)))
         .execute(&connection)
-        .expect("Error deleting posts");
-
-    println!("Deleted {} posts", num_deleted);
+        .expect("Error deleting hash");
 }

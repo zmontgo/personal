@@ -2,6 +2,7 @@
 #[macro_use] extern crate diesel;
 extern crate rocket_dyn_templates;
 extern crate dotenv;
+extern crate sanitize_html;
 
 use rocket_dyn_templates::Template;
 use rocket::Config;
@@ -34,7 +35,8 @@ fn rocket() -> _ {
         .mount("/", routes![
             routes::get::index,
             routes::get::web,
-            routes::get::blog
+            routes::get::blog,
+            routes::post::contact_web
         ])
         .mount("/", FileServer::from("static/"))
         .register("/", catchers![routes::handlers::default_catcher])

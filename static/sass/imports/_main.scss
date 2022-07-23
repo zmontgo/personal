@@ -139,10 +139,10 @@
 
   select {
     text-transform: uppercase;
+  }
 
-    &:focus {
-      outline: solid #80a6ff 5px;
-    }
+  select:focus, .btn:focus {
+    outline: solid #80a6ff 5px;
   }
   
   input[type='text']:focus, [type='email']:focus, textarea:focus {

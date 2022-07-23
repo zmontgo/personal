@@ -19,6 +19,7 @@ pub struct NewPost<'a> {
 }
 
 #[derive(Queryable)]
+#[derive(Clone)]
 pub struct Hash {
   pub id: i32,
   pub hash_body: String,
