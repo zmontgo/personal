@@ -1,13 +1,18 @@
 #[macro_use] extern crate rocket;
+#[macro_use] extern crate diesel;
 extern crate rocket_dyn_templates;
 extern crate dotenv;
+extern crate sanitize_html;
 
 use rocket_dyn_templates::Template;
 use rocket::Config;
+use rocket::fs::FileServer;
 use dotenv::dotenv;
 use std::env;
 
 #[cfg(test)] mod tests;
+
+mod database;
 mod helper;
 mod routes;
 
@@ -31,8 +36,9 @@ fn rocket() -> _ {
             routes::get::index,
             routes::get::web,
             routes::get::blog,
-            routes::static_files::files
+            routes::post::contact_web
         ])
+        .mount("/", FileServer::from("static/"))
         .register("/", catchers![routes::handlers::default_catcher])
         .attach(helper::csp::init())
         .attach(Template::fairing())

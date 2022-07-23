@@ -10,7 +10,7 @@
         <h1 class="vr">&bull; Get in Touch &bull;</h1>
         <div class="underline">
         </div>
-        <form action="#" method="post" id="contact_form">
+        <form action="/web" method="post" id="contact_form">
           <div class="name">
             <label for="name"></label>
             <input type="text" placeholder="MY NAME IS" name="name" id="name_input" required>
@@ -18,6 +18,11 @@
           <div class="email">
             <label for="email"></label>
             <input type="email" placeholder="MY E-MAIL IS" name="email" id="email_input" required>
+          </div>
+          <div class="fax hid">
+            <label for="fax"></label>
+            <!-- Don't fill this out -->
+            <input type="text" placeholder="MY FAX IS" name="fax" id="fax_input">
           </div>
           <div class="subject">
             <label for="subject"></label>
@@ -32,10 +37,10 @@
             <label for="message"></label>
             <textarea name="message" placeholder="I'D LIKE TO CHAT ABOUT" id="message_input" cols="30" rows="5" required></textarea>
           </div>
+          <input name="hash" value="{{hash}}" class="hid">
           <div class="submit">
-            <input type="submit" value="Send Message" class="btn" disabled />
+            <input type="submit" value="Send Message" class="btn" />
           </div>
-          <p class="small">Please use email for the time being.</p>
         </form><!-- // End form -->
       </div><!-- // End #container -->
       <p class="vr">Prefer email? Don't worry, I'll respond just as quick there.</p>
