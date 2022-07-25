@@ -16,6 +16,14 @@
   }
 }
 
+.selfie {
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  top: 0;
+  z-index: -2;
+}
+
 .hid {
   display: none;
 }
@@ -32,8 +40,10 @@
   height: 100vh;
 
   &__text {
+    width: 50%;
+
     h1 {
-      font-size: max(15vw, 1.2em);
+      font-size: 9vw;
       line-height: 1;
     }
 
