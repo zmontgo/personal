@@ -95,7 +95,7 @@
       width: 100%;
 
       h1 {
-        font-size: 21vw;
+        font-size: 20vw;
       }
     }
   }
@@ -119,12 +119,6 @@
 
   .footer {
     padding: $base-sizing*3 10vw $base-sizing*5;
-  }
-
-  .hero {
-    &__text {
-      padding: $base-sizing*2 10vw;
-    }
   }
 
   .section {
