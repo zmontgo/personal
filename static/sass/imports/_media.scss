@@ -86,6 +86,20 @@
 }
 
 @media only screen and (max-width: $on-mobile) {
+  .selfie {
+    display: none;
+  }
+
+  .hero {
+    &__text {
+      width: 100%;
+
+      h1 {
+        font-size: 21vw;
+      }
+    }
+  }
+
   .header {
     a {
       letter-spacing: 0.1em;
@@ -125,6 +139,7 @@
     border-top: solid 3px var(--text-color);
     border-bottom: solid 3px var(--text-color);
     margin: $base-sizing*2 0;
+    max-width: 100%;
 
     form {
       padding: 0;
